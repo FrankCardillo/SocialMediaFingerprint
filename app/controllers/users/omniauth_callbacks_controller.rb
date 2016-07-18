@@ -16,5 +16,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def failure
     redirect_to unauthenticated_root_path
+    puts "Something went wrong"
   end
 end
