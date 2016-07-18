@@ -7,6 +7,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'fog'
 gem 'carrierwave'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'koala', '~> 2.2'
 
 group :development, :test do
   gem 'dotenv-rails'
