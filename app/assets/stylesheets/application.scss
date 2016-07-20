@@ -9,13 +9,16 @@
 .sign_in_button {
   border-radius: 25px;
   font-size: 25px;
+  padding-left: 0;
+  padding-right: 20px;
+  border-color: #3B579D;
 }
 
 .sign_in_button_container {
   margin-top: 100px;
   border-radius: 15px;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -23,6 +26,8 @@
 }
 
 .sign_in_image {
+  float: left;
   height: 100%;
   width: auto;
+  margin-right: 20px;
 }
