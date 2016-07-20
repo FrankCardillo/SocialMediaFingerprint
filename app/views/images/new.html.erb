@@ -1,6 +1,14 @@
+<canvas id="myCanvas"></canvas>
+
+<button id="generator">Generate Image to Save</button>
+
 <%= form_for(@image) do |f| %>
-  <%= f.label :image_url %>
-  <%= f.file_field :image_url %>
+  <%= f.label :image_url, 'Copy and Paste the Generated Image URL Here:' %>
+  <%= f.text_field :image_url %>
 
   <%= f.submit %>
 <% end %>
+
+<%= javascript_include_tag 'paper-full', type: "text/javascript" %>
+<%= javascript_include_tag 'drawing', type: "text/paperscript", canvas: "myCanvas" %>
+<%= javascript_include_tag 'convert-drawing', type: 'text/javascript' %>
