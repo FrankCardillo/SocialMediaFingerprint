@@ -5,13 +5,14 @@ class ImagesController < ApplicationController
 
   def new
     @image = Image.new
+    @fb_data = FacebookApi.new(current_user.access_token)
+    @derp = @fb_data.data
   end
 
   def create
     if current_user.image
       current_user.image.delete
     end
-
     @image = Image.new({image_url: params[:image_url]})
     @image.user = current_user
 
