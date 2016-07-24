@@ -11,7 +11,7 @@ module OmniAuthTestHelper
           email:      "test@example.com"
         },
         credentials: {
-          token: "123456",
+          token: "EAAYNmIysLzABAJvckBS2PGUfXsvqaK3nQ07boWOQkDJDMiQqGeWlSpjsZA2MBMgZClo61pZCIBCTJtvQw1jmHTd9WHQxlgqDzw5lKWtNclmhn7emzlCin01ZBLy9xM7a3EN9IRxZAehQhCoqKTYCyJB8U8E8uDncGXcrOuoOHGQZDZD",
           expires_at: Time.now + 1.week
         },
         extra: {
