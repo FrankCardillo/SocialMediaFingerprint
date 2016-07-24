@@ -11,15 +11,20 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'koala', '~> 2.2'
+gem 'rails_hydration'
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'valid_attribute'
   gem 'rspec-rails', '~> 3.0'
+  gem 'database_cleaner'
   gem 'pry-rails'
   gem 'shoulda'
-  gem 'valid_attribute'
 end
 
 group :test do

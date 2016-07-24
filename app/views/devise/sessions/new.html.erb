@@ -1,7 +1,12 @@
-<h2>Log in</h2>
+<h1 class="sign_in_title">
+  Social Media Fingerprint
+</h1>
 
-<p>
-  TESTTEST
-</p>
-
-<%= render "devise/shared/links" %>
+<div class="sign_in_button_container">
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <button class="sign_in_button"><img class="sign_in_image" src="<%= path_to_image('FB-f-Logo__blue_58.png') %>"/><%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}",
+    omniauth_authorize_path(resource_name, provider) %></button>
+  <% end -%>
+<% end -%>
+</div>

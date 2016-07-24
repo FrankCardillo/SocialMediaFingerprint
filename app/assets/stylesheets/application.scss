@@ -1,2 +1,52 @@
-// @import "*";
+@import "*";
 
+.sign_in_title {
+  margin: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.sign_in_button {
+  border-radius: 25px;
+  font-size: 25px;
+  padding-left: 0;
+  padding-right: 20px;
+  border-color: #3B579D;
+}
+
+.sign_in_button_container {
+  margin-top: 100px;
+  border-radius: 15px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  border-style: solid;
+}
+
+.sign_in_image {
+  float: left;
+  height: 100%;
+  width: auto;
+  margin-right: 20px;
+}
+
+.canvas {
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas_container {
+  height: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
+.display_image {
+  background-color: white;
+}

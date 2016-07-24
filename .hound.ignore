@@ -1,0 +1,7 @@
+/db/schema.rb
+/config/initializers/devise.rb
+/db/migrate/*.rb
+db/migrate/*.rb
+db/migrate/*
+/spec/support/*.rb
+/app/assets/stylesheets/*.scss

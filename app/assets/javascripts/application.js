@@ -10,6 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require rails_hydration
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+//= require jquery.min
+//= require jquery.scrollex.min
+//= require jquery.scrolly.min
+//= require skel.min
+//= require util
+//= require main

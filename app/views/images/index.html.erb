@@ -1,0 +1,11 @@
+<div>
+  <% @images.each do |image| %>
+    <div>
+      <%= image.user.name %>'s Fingerprint
+      <br />
+      <img class="display_image" src="<%= image.image_url %>" />
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Create New Fingerprint', new_image_path %>

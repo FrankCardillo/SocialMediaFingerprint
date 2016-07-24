@@ -1,0 +1,28 @@
+$("#generator").on('click', function(e) {
+  var dataURL = document.getElementById("myCanvas").toDataURL("image/png;base64;");
+  var file= dataURLtoBlob(dataURL);
+  var fd = new FormData();
+
+  fd.append("image_url", file, "blob.png");
+
+  var request = $.ajax({
+    url: "/images",
+    type: "POST",
+    data: fd,
+    processData: false,
+    contentType: false
+  });
+  request.done(function() {
+    location.href = "<%=ENV['APP_HOST_DOMAIN']%>/images";
+  });
+});
+
+function dataURLtoBlob(dataURL) {
+  var binary = atob(dataURL.split(',')[1]);
+  var array = [];
+
+  for(var i = 0; i < binary.length; i++) {
+    array.push(binary.charCodeAt(i));
+  }
+  return new Blob([new Uint8Array(array)], {type: 'image/png'});
+}
