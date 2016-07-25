@@ -9,6 +9,7 @@ class FacebookApi
   private
 
   def graph(user_token)
-    @fb_graph ||= Koala::Facebook::API.new(user_token, ENV['FACEBOOK_APP_SECRET'])
+    @fb_graph ||= Koala::Facebook::API.new(user_token,
+    ENV['FACEBOOK_APP_SECRET'])
   end
 end

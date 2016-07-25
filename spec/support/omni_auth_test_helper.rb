@@ -1,7 +1,8 @@
 module OmniAuthTestHelper
   def valid_facebook_login_setup
     if Rails.env.test?
-      test_users = Koala::Facebook::TestUsers.new(app_id: ENV['FACEBOOK_APP_ID'], secret: ENV['FACEBOOK_APP_SECRET'])
+      test_users = Koala::Facebook::TestUsers.new(app_id:
+      ENV['FACEBOOK_APP_ID'], secret: ENV['FACEBOOK_APP_SECRET'])
       user = test_users.create(true)
       OmniAuth.config.test_mode = true
       OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
