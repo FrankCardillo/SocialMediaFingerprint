@@ -9,20 +9,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <a href="//www.iubenda.com/privacy-policy/7884732" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a>
-  <script type="text/javascript">
-    (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-    s.src = "//cdn.iubenda.com/iubenda.js";
-    tag.parentNode.insertBefore(s,tag);};
-    if(w.addEventListener){w.addEventListener("load", loader, false);}
-    else if(w.attachEvent){w.attachEvent("onload", loader);}
-    else{w.onload = loader;}})(window, document);
-  </script>
+  <div class="row top_bar">
+    <% if current_user %>
+    <% if current_page?(images_path) %>
+      <div class="top_bar_button_wrapper">
+        <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
+      </div>
+    <% end %>
+      <div class="top_bar_button_wrapper">
+        <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+      </div>
+    <% end %>
+  </div>
+
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert alert-info" %>
-  <% end %>
-  <% if current_user %>
-    <div><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
   <% end %>
   <%= yield %>
 </body>

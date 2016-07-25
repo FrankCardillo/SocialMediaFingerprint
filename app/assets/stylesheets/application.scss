@@ -1,43 +1,68 @@
 @import "*";
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.button_to {
+  padding: 0;
+  margin: 0;
+}
+
+.button_wrapper {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.create_button_wrapper {
+  text-align: center;
+}
+
+.gallery_title {
+  font-size: 50px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  text-align: center;
+  text-decoration: underline;
+}
+
 .sign_in_title {
+  font-size: 50px;
   margin: 30px;
   text-align: center;
-  font-size: 50px;
 }
 
 .sign_in_button {
-  border-radius: 25px;
-  font-size: 25px;
+  border-color: #3B579D;
+  border-radius: 15px;
+  border-style: solid;
+  display: inline-block;
+  font-size: 23px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 100px;
+  padding-bottom: 200px;
   padding-left: 0;
   padding-right: 20px;
-  border-color: #3B579D;
-}
-
-.sign_in_button_container {
-  margin-top: 100px;
-  border-radius: 15px;
-  margin-left: 200px;
-  margin-right: 200px;
   padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
-  border-style: solid;
+  vertical-align: middle;
 }
 
 .sign_in_image {
   float: left;
   height: 100%;
   width: auto;
-  margin-right: 20px;
 }
 
 .canvas {
-  border-style: solid;
-  border-color: black;
   background-color: white;
-  width: 100%;
+  border-color: black;
+  border-style: solid;
   height: 100%;
+  width: 100%;
 }
 
 .canvas_container {
@@ -49,4 +74,14 @@
 
 .display_image {
   background-color: white;
+}
+
+.top_bar {
+  text-align: right;
+  margin-left: 55%;
+}
+
+.top_bar_button_wrapper {
+  margin: 20px 10px;
+  padding: 0;
 }
