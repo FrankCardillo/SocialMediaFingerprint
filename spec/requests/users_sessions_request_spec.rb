@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "GET '/auth/facebook/callback'" do
   before(:each) do
     valid_facebook_login_setup
-    get "/users/auth/facebook/callback"
+    get '/users/auth/facebook/callback'
     request.env['omniauth.auth'] = OmniAuth.config.mock_auth[:facebook]
   end
 
