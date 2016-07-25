@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 describe FacebookApi do
-  let(:test_users) { Koala::Facebook::TestUsers.new(app_id:
-    ENV['FACEBOOK_APP_ID'], secret: ENV['FACEBOOK_APP_SECRET']) }
+  let(:test_users) do
+    Koala::Facebook::TestUsers.new(
+    app_id: ENV['FACEBOOK_APP_ID'], secret: ENV['FACEBOOK_APP_SECRET']
+    ) 
+  end
   let(:user) { test_users.create(true) }
   let(:user_graph_api) { Koala::Facebook::API.new(user['access_token']) }
   let(:fb_data) { FacebookApi.new(user['access_token']) }
