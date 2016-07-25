@@ -24,4 +24,10 @@ ratings:
   - "**.rb"
 exclude_paths:
 - spec/**/*
-- app/assets/javascripts/**
+- app/assets/javascripts/jquery.min.js
+- app/assets/javascripts/jquery.scrollex.js
+- app/assets/javascripts/jquery.scrolly.js
+- app/assets/javascripts/main.js
+- app/assets/javascripts/paper-full.js
+- app/assets/javascripts/skel.min.js
+- app/assets/javascripts/util.js
