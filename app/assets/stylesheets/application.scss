@@ -3,33 +3,50 @@
 body {
   margin: 0;
   padding: 0;
-  
 }
 
-.button_to {
-  padding: 0;
+.button-to {
   margin: 0;
+  padding: 0;
 }
 
-.button_wrapper {
+.button-wrapper {
   margin-left: 0;
   padding-left: 0;
 }
 
-.create_button_wrapper {
+.canvas {
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+}
+
+.canvas-container {
+  height: 40%;
+  width: 20%;
+  margin: 10% auto 3%;
+}
+
+.control-buttons {
   text-align: center;
 }
 
-.gallery_container {
+.create-button-wrapper {
+  text-align: center;
+}
+
+.display-image {
+  background-color: white;
+  margin: auto;
+  display: block;
+}
+
+.gallery-container {
   margin: auto;
   width: 100%;
 }
 
-.portrait_container {
-  margin-top: 5%;
-}
-
-.gallery_title {
+.gallery-title {
   font-size: 50px;
   margin-bottom: 10%;
   margin-top: 10%;
@@ -37,19 +54,16 @@ body {
   text-decoration: underline;
 }
 
-.image_title {
+.image-title {
+  text-align: center;
   text-decoration: underline;
-  text-align: center;
 }
 
-.sign_in_title {
-  font-size: 50px;
-  margin: 30px;
-  text-align: center;
+.portrait-container {
+  margin-top: 5%;
 }
 
-.sign_in_button {
-  border-color: #3B579D;
+.sign-in-button {
   border-radius: 15px;
   border-style: solid;
   display: inline-block;
@@ -65,42 +79,25 @@ body {
   vertical-align: middle;
 }
 
-.sign_in_image {
+.sign-in-image {
   float: left;
   height: 100%;
   width: auto;
 }
 
-.canvas {
-  background-color: white;
-  border-color: black;
-  border-style: solid;
-  height: 100%;
-  width: 100%;
-}
-
-.canvas_container {
-  height: 40%;
-  width: 20%;
-  margin: 10% auto 3%;
-}
-
-.control_buttons {
+.sign-in-title {
+  font-size: 50px;
+  margin: 30px;
   text-align: center;
 }
 
-.display_image {
-  background-color: white;
-  margin: auto;
-  display: block;
-}
-
-.top_bar {
-  text-align: right;
+.top-bar {
+  background-color: $gray;
   margin-left: 55%;
+  text-align: right;
 }
 
-.top_bar_button_wrapper {
+.top-bar-button-wrapper {
   margin: 20px 10px;
   padding: 0;
 }

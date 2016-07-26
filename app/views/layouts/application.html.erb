@@ -4,7 +4,7 @@
   <title>Social Media Fingerprint</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,18 +12,18 @@
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert alert-info" %>
   <% end %>
-  <div class="row top_bar">
+  <div class="row top-bar">
     <% if current_user %>
       <% if current_page?(images_path) %>
-        <div class="top_bar_button_wrapper">
+        <div class="top-bar-button-wrapper">
           <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
         </div>
       <% else %>
-      <div class="top_bar_button_wrapper">
+      <div class="top-bar-button-wrapper">
         <%= button_to 'Return to Gallery', images_path, :method => :get %>
       </div>
       <% end %>
-      <div class="top_bar_button_wrapper">
+      <div class="top-bar-button-wrapper">
         <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
       </div>
     <% end %>
