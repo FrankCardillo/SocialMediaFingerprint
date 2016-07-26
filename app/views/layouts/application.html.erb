@@ -9,22 +9,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
   <div class="row top_bar">
     <% if current_user %>
-    <% if current_page?(images_path) %>
+      <% if current_page?(images_path) %>
+        <div class="top_bar_button_wrapper">
+          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
+        </div>
+      <% else %>
       <div class="top_bar_button_wrapper">
-        <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
+        <%= button_to 'Return to Gallery', images_path, :method => :get %>
       </div>
-    <% end %>
+      <% end %>
       <div class="top_bar_button_wrapper">
         <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
       </div>
     <% end %>
   </div>
-
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: "alert alert-info" %>
-  <% end %>
   <%= yield %>
 </body>
 </html>

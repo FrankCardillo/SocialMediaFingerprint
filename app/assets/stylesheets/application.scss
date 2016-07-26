@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  
 }
 
 .button_to {
@@ -20,12 +20,26 @@ body {
   text-align: center;
 }
 
+.gallery_container {
+  margin: auto;
+  width: 100%;
+}
+
+.portrait_container {
+  margin-top: 5%;
+}
+
 .gallery_title {
   font-size: 50px;
   margin-bottom: 10%;
   margin-top: 10%;
   text-align: center;
   text-decoration: underline;
+}
+
+.image_title {
+  text-decoration: underline;
+  text-align: center;
 }
 
 .sign_in_title {
@@ -67,13 +81,18 @@ body {
 
 .canvas_container {
   height: 40%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
+  width: 20%;
+  margin: 10% auto 3%;
+}
+
+.control_buttons {
+  text-align: center;
 }
 
 .display_image {
   background-color: white;
+  margin: auto;
+  display: block;
 }
 
 .top_bar {
