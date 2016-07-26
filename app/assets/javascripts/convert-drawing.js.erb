@@ -1,19 +1,19 @@
-$("#generator").on('click', function(e) {
-  var dataURL = document.getElementById("myCanvas").toDataURL("image/png;base64;");
+$('#saver').on('click', function(e) {
+  var dataURL = document.getElementById('myCanvas').toDataURL('image/png;base64;');
   var file= dataURLtoBlob(dataURL);
   var fd = new FormData();
 
-  fd.append("image_url", file, "blob.png");
+  fd.append('image_url', file, 'blob.png');
 
   var request = $.ajax({
-    url: "/images",
-    type: "POST",
+    url: '/images',
+    type: 'POST',
     data: fd,
     processData: false,
     contentType: false
   });
   request.done(function() {
-    location.href = "<%=ENV['APP_HOST_DOMAIN']%>/images";
+    location.href = '<%=ENV["APP_HOST_DOMAIN"]%>/images';
   });
 });
 

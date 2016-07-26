@@ -1,11 +1,13 @@
-<div>
+<h1 class="gallery-title">
+  Gallery
+</h1>
+<div class="row gallery-container">
   <% @images.each do |image| %>
-    <div>
-      <%= image.user.name %>'s Fingerprint
-      <br />
-      <img class="display_image" src="<%= image.image_url %>" />
+    <div class="portrait-container small-4 columns">
+      <p class="image-title">
+        <%= image.user.name %>'s Fingerprint
+      </p>
+      <img class="display-image" src="<%= image.image_url %>" />
     </div>
   <% end %>
 </div>
-
-<%= link_to 'Create New Fingerprint', new_image_path %>

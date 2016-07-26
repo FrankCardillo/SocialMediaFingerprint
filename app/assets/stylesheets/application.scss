@@ -1,52 +1,101 @@
 @import "*";
 
-.sign_in_title {
-  margin: 30px;
-  text-align: center;
-  font-size: 50px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.sign_in_button {
-  border-radius: 25px;
-  font-size: 25px;
+.button-to {
+  margin: 0;
+  padding: 0;
+}
+
+.button-wrapper {
+  margin-left: 0;
   padding-left: 0;
-  padding-right: 20px;
-  border-color: #3B579D;
-}
-
-.sign_in_button_container {
-  margin-top: 100px;
-  border-radius: 15px;
-  margin-left: 200px;
-  margin-right: 200px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
-  border-style: solid;
-}
-
-.sign_in_image {
-  float: left;
-  height: 100%;
-  width: auto;
-  margin-right: 20px;
 }
 
 .canvas {
-  border-style: solid;
-  border-color: black;
-  background-color: white;
-  width: 100%;
+  background-color: $white;
   height: 100%;
+  width: 100%;
 }
 
-.canvas_container {
+.canvas-container {
   height: 40%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
+  margin: 10% auto 3%;
+  width: 20%;
 }
 
-.display_image {
+.control-buttons {
+  text-align: center;
+}
+
+.create-button-wrapper {
+  text-align: center;
+}
+
+.display-image {
   background-color: white;
+  display: block;
+  margin: auto;
+}
+
+.gallery-container {
+  margin: auto;
+  width: 100%;
+}
+
+.gallery-title {
+  font-size: 50px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.image-title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.portrait-container {
+  margin-top: 5%;
+}
+
+.sign-in-button {
+  display: inline-block;
+  font-size: 23px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 100px;
+  padding-bottom: 200px;
+  padding-left: 0;
+  padding-right: 20px;
+  padding-top: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sign-in-image {
+  float: left;
+  height: 100%;
+  width: auto;
+}
+
+.sign-in-title {
+  font-size: 50px;
+  margin: 30px;
+  text-align: center;
+}
+
+.top-bar {
+  background-color: $gray;
+  margin-left: 55%;
+  text-align: right;
+}
+
+.top-bar-button-wrapper {
+  margin: 20px 10px;
+  padding: 0;
 }
