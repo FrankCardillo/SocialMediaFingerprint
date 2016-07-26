@@ -6,7 +6,7 @@ feature 'saving canvas as image' do
     visit '/users/auth/facebook/callback'
     Rails.application.env_config['devise.mapping'] = Devise.mappings[:user]
     Rails.application.env_config['omniauth.auth'] =
-    OmniAuth.config.mock_auth[:facebook]
+      OmniAuth.config.mock_auth[:facebook]
   end
 
   scenario 'user signs out' do
