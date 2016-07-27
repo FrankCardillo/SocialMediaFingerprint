@@ -2,7 +2,7 @@ class FacebookApi
   attr_reader :data
 
   def initialize(user_token)
-    @data = graph(user_token).get_object('me?fields=first_name,email,last_name,
+    @data = graph(user_token).get_object('me?fields=first_name,id,last_name,
     age_range,link,gender,locale,timezone,updated_time,verified')
   end
 

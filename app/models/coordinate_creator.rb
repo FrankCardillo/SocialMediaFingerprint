@@ -36,9 +36,9 @@ class CoordinateCreator
     @start_y = last_name.length
   end
 
-  def convert_email_to_radius
-    email = data_hash['email']
-    @radius = email.length
+  def convert_id_to_radius
+    id = data_hash['id']
+    @radius = id.length
   end
 
   def convert_link_to_ellipse_size
@@ -63,7 +63,7 @@ class CoordinateCreator
   def main_converter
     convert_first_name_to_x
     convert_last_name_to_y
-    convert_email_to_radius
+    convert_id_to_radius
     convert_link_to_ellipse_size
     convert_age_range_to_base_case
     convert_gender_to_expansion_rate
