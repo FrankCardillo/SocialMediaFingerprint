@@ -1,13 +1,23 @@
 Hydration.onReady(function(data){
 
-  function drawImage() {
-    var point = new Point(data.userData['link'].length, data.userData['link'].length);
-    var size = new Size(30);
-    var path = new Path.Rectangle(point, size);
-    path.strokeColor = 'red';
-  };
+  var point = new Point(data.fractalParams['x'], data.fractalParams['y']);
+
+  function drawImage(x, y, radius) {
+    var path = new Path.Ellipse({
+        point: [x, y],
+        size: data.fractalParams['size'],
+        strokeColor: 'blue'
+    });
+
+    if(radius > data.fractalParams['base_case']) {
+      drawImage(x + radius/data.fractalParams['rate'], y, radius/data.fractalParams['rate']);
+      drawImage(x - radius/data.fractalParams['rate'], y, radius/data.fractalParams['rate']);
+      drawImage(x, y + radius/data.fractalParams['rate'], radius/data.fractalParams['rate']);
+      drawImage(x, y - radius/data.fractalParams['rate'], radius/data.fractalParams['rate']);
+    }
+  }
 
   $('#drawer').click(function() {
-    drawImage();
+    drawImage(data.fractalParams['x'], data.fractalParams['y'], data.fractalParams['radius']);
   });
 });
