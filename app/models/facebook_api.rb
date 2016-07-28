@@ -1,16 +1,19 @@
 class FacebookApi
   attr_reader :data
 
-  def initialize(user_token)
-    @data = graph(user_token).get_object('me?fields=first_name,email,last_name,
-    age_range,link,gender,locale,timezone,updated_time,verified')
+  def initialize(user_token, app_secret)
+    @data = graph(user_token, app_secret).get_object(
+      'me?fields=first_name,id,last_name,
+      age_range,link,gender,locale,timezone,updated_time,verified'
+    )
   end
 
   private
 
-  def graph(user_token)
-    @fb_graph ||= Koala::Facebook::API.new(
-      user_token, ENV['FACEBOOK_APP_SECRET']
+  def graph(user_token, app_secret)
+    data_hash ||= Koala::Facebook::API.new(
+      user_token, app_secret
     )
+    data_hash
   end
 end

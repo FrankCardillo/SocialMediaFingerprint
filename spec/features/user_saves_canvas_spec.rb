@@ -14,7 +14,7 @@ feature 'saving canvas as image' do
     expect(page).to have_content('Generate Your Fingerprint')
   end
 
-  scenario 'user creates saves canvas, sees it in the gallery', js: true do
+  scenario 'user creates and saves canvas, sees it in the gallery', js: true do
     click_button 'Create New Fingerprint'
     click_button 'Generate Your Fingerprint'
     click_button 'Save Your Fingerprint'

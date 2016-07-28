@@ -1,12 +1,13 @@
 class ImagesController < ApplicationController
   def index
-    @images = Image.all
+    @images = Image.all.order(user_id: :desc)
   end
 
   def new
     @image = Image.new
-    @fb_data = FacebookApi.new(current_user.access_token)
-    @derp = @fb_data.data
+    @fb_data = FacebookApi.new(current_user.access_token, ENV['FACEBOOK_APP_SECRET'])
+    coord_creator = CoordinateCreator.new(@fb_data.data)
+    @fractal_params = coord_creator.fractal_parameters
   end
 
   def create
