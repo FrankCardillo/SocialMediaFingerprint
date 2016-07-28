@@ -1,23 +1,28 @@
 Hydration.onReady(function(data){
-
-  var point = new Point(data.fractalParams['x'], data.fractalParams['y']);
+  var circleSize = data.fractalParams['size'];
+  var circleColor = data.fractalParams['color'];
+  var baseCase = data.fractalParams['base_case'];
+  var rate = data.fractalParams['rate'];
+  var startX = data.fractalParams['x'];
+  var startY = data.fractalParams['y'];
+  var radius = data.fractalParams['radius'];
 
   function drawImage(x, y, radius) {
     var path = new Path.Ellipse({
         point: [x, y],
-        size: data.fractalParams['size'],
-        strokeColor: 'blue'
+        size: circleSize,
+        strokeColor: circleColor
     });
 
-    if(radius > data.fractalParams['base_case']) {
-      drawImage(x + radius/data.fractalParams['rate'], y, radius/data.fractalParams['rate']);
-      drawImage(x - radius/data.fractalParams['rate'], y, radius/data.fractalParams['rate']);
-      drawImage(x, y + radius/data.fractalParams['rate'], radius/data.fractalParams['rate']);
-      drawImage(x, y - radius/data.fractalParams['rate'], radius/data.fractalParams['rate']);
+    if(radius > baseCase) {
+      drawImage(x + radius/rate, y, radius/rate);
+      drawImage(x - radius/rate, y, radius/rate);
+      drawImage(x, y + radius/rate, radius/rate);
+      drawImage(x, y - radius/rate, radius/rate);
     }
   }
 
   $('#drawer').click(function() {
-    drawImage(data.fractalParams['x'], data.fractalParams['y'], data.fractalParams['radius']);
+    drawImage(startX, startY, radius);
   });
 });
