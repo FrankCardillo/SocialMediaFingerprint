@@ -13,11 +13,13 @@ describe FacebookApi do
   let(:user_graph_api) { Koala::Facebook::API.new(user['access_token']) }
   let(:fb_data) { FacebookApi.new(user['access_token'], test_app_secret) }
 
-  describe '#graph' do
+  describe '#initialize' do
     it 'data is a hash' do
       expect(fb_data.data.class).to eq(Hash)
     end
+  end
 
+  describe '#graph' do
     it 'data hash has the correct data about the user' do
       expect(fb_data.data['first_name']).to eq(
         user_graph_api.get_object('me?fields=first_name')['first_name']
