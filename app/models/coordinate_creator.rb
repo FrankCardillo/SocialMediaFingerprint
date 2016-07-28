@@ -30,7 +30,7 @@ class CoordinateCreator
 
   def convert_first_name_to_x_y
     first_name = data_hash['first_name']
-    
+
     if first_name.length < 20
       @start_x = first_name.length * 20
       @start_y = first_name.length * 20
@@ -71,8 +71,8 @@ class CoordinateCreator
 
   def convert_gender_to_expansion_rate
     gender = data_hash['gender']
-    expansion_rates_male = [2,3,4,5]
-    expansion_rates_female = [1,3,6,2,7]
+    expansion_rates_male = [2, 3, 4, 5]
+    expansion_rates_female = [1, 3, 6, 2, 7]
 
     if gender == 'male'
       @expansion_rate = expansion_rates_male.sample

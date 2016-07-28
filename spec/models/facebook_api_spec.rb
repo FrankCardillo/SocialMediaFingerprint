@@ -5,7 +5,6 @@ describe FacebookApi do
   let(:test_app_secret) { '732386bd8494d6057e2b04ad24b02cc5' }
   let(:test_users) do
     Koala::Facebook::TestUsers.new(
-      #app_id: ENV['FACEBOOK_APP_ID'], secret: ENV['FACEBOOK_APP_SECRET']
       app_id: test_app_id, secret: test_app_secret
     )
   end
