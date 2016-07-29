@@ -1,6 +1,6 @@
 $('#saver').on('click', function(e) {
   var dataURL = document.getElementById('myCanvas').toDataURL('image/png;base64;');
-  var file= dataURLtoBlob(dataURL);
+  var file = dataURLtoBlob(dataURL);
   var fd = new FormData();
 
   fd.append('image_url', file, 'blob.png');

@@ -50,10 +50,12 @@ describe ImagesController do
 
   describe 'POST #create' do
     context 'with valid attributes' do
-      let(:new_image_params)  { {image:{user_id: user, image_url: File.open('spec/support/test.png')} }}
+      # context ' when the user has another image'
+      # context 'when the user does not have an image'
+      let(:new_image_params) { fixture_file_upload('test.png', 'image/png') }
 
       it 'saves the new Image in the database' do
-        expect { post :create, image: new_image_params }.to change{Image.count}.by(1)
+        expect { post :create, image_url: new_image_params }.to change{Image.count}.by(1)
         uploaded_image = Image.last
 
         expect(uploaded_image.image_url).to_not be_nil
