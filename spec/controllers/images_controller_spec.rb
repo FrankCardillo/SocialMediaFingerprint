@@ -2,7 +2,11 @@ require 'rails_helper'
 
 describe ImagesController do
   let!(:image) { FactoryGirl.create(:image) }
-  let!(:user) { login_user }
+  let(:user) { FactoryGirl.create(:user) }
+
+  before do
+    sign_in user
+  end
 
   describe 'GET #index' do
     it 'populates an array of images' do
@@ -46,13 +50,18 @@ describe ImagesController do
 
   describe 'POST #create' do
     context 'with valid attributes' do
-      it 'saves the new contact in the database' do
-        post :create, id: image
-        expect(Image.all).to include image
+      let(:new_image_params)  { {image:{user_id: user, image_url: File.open('spec/support/test.png')} }}
+
+      it 'saves the new Image in the database' do
+        expect { post :create, image: new_image_params }.to change{Image.count}.by(1)
+        uploaded_image = Image.last
+
+        expect(uploaded_image.image_url).to_not be_nil
+        expect(uploaded_image.user).to eq user
       end
-      
+
       it 'redirects to the home page' do
-        post :create, id: image
+        post :create, image: new_image_params
         expect(response).to redirect_to 'http://test.host/images'
       end
     end
