@@ -48,8 +48,9 @@ describe ImagesController do
     context 'with valid attributes' do
       it 'saves the new contact in the database' do
         post :create, id: image
-        expect(Image.last).to eq(image)
+        expect(Image.all).to include image
       end
+      
       it 'redirects to the home page' do
         post :create, id: image
         expect(response).to redirect_to 'http://test.host/images'
