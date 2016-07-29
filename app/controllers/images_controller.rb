@@ -6,9 +6,15 @@ class ImagesController < ApplicationController
   def new
     @image = Image.new
     if Rails.env.test?
-      @fb_data = FacebookApi.new(current_user.access_token, '732386bd8494d6057e2b04ad24b02cc5')
+      @fb_data = FacebookApi.new(
+        current_user.access_token,
+        '732386bd8494d6057e2b04ad24b02cc5'
+      )
     else
-      @fb_data = FacebookApi.new(current_user.access_token, ENV['FACEBOOK_APP_SECRET'])
+      @fb_data = FacebookApi.new(
+        current_user.access_token,
+        ENV['FACEBOOK_APP_SECRET']
+      )
     end
     @coord_creator = CoordinateCreator.new(@fb_data.data)
     @fractal_params = @coord_creator.fractal_parameters
