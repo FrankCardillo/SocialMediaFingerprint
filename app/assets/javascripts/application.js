@@ -17,3 +17,13 @@
 //= require jquery.min
 //= require jquery.scrollex.min
 //= require jquery.scrolly.min
+
+$(document).ready(function() {
+  $(".top-bar-buttons").hover(function() {
+    $(this).removeClass("top-bar-buttons");
+    $(this).addClass("button-hover");
+  }, function() {
+    $(this).removeClass("button-hover");
+    $(this).addClass("top-bar-buttons");
+  });
+});
