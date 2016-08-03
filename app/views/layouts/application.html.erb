@@ -4,29 +4,37 @@
   <title>Social Media Fingerprint</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css">
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: "alert alert-info" %>
-  <% end %>
-  <div class="row top-bar">
-    <% if current_user %>
-      <% if current_page?(images_path) %>
-        <div class="top-bar-button-wrapper">
-          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
-        </div>
-      <% else %>
-      <div class="top-bar-button-wrapper">
-        <%= button_to 'Return to Gallery', images_path, :method => :get %>
-      </div>
+  <div class='top-bar'>
+    <div class='top-bar-left'>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info" %>
       <% end %>
-      <div class="top-bar-button-wrapper">
-        <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-      </div>
-    <% end %>
+    </div>
+    <div class='top-bar-right'>
+      <% if current_user %>
+        <ul class="menu">
+          <% if current_page?(images_path) %>
+            <li>
+              <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
+            </li>
+          <% else %>
+            <li>
+              <%= button_to 'Return to Gallery', images_path, :method => :get %>
+            </li>
+          <% end %>
+          <li>
+            <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
   </div>
   <%= yield %>
 </body>
