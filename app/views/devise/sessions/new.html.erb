@@ -5,10 +5,10 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <div id='sign-in-container' class='row'>
-      <div>
+      <div class='sign-in-component'>
         <img id='fb-logo' src="<%= path_to_image('FB-f-Logo__blue_58.png') %>"/>
       </div>
-      <div>
+      <div class='sign-in-component'>
         <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}",
         omniauth_authorize_path(resource_name, provider), class: 'input-button-style' %>
       </div>

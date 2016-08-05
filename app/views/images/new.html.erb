@@ -1,7 +1,13 @@
 <%= hydration('fractalParams', @fractal_params) %>
 
-<div>
-  <canvas id='myCanvas'></canvas>
+<div class='outer-container'>
+  <div class='canvas-container'>
+    <p>
+      Your Fingerprint
+    </p>
+    <canvas id='my-canvas'>
+    </canvas>
+  </div>
 </div>
 
 <div class='control-panel'>
@@ -12,5 +18,5 @@
 </div>
 
 <%= javascript_include_tag 'paper-full', type: 'text/javascript' %>
-<%= javascript_include_tag 'drawing', type: 'text/paperscript', canvas: 'myCanvas' %>
+<%= javascript_include_tag 'drawing', type: 'text/paperscript', canvas: 'my-canvas' %>
 <%= javascript_include_tag 'convert-drawing', type: 'text/javascript' %>

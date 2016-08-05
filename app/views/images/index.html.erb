@@ -1,13 +1,13 @@
 <h1 class='gallery-title'>
   Gallery
 </h1>
-<div>
+<div class='row'>
   <% @images.each do |image| %>
-    <div>
-      <p>
+    <div class='small-12 medium-3 column'>
+      <p class='image-title'>
         <%= image.user.name %>'s Fingerprint
       </p>
-      <img src="<%= image.image_url %>" />
+      <img class='fingerprint-image' src="<%= image.image_url %>" />
     </div>
   <% end %>
 </div>

@@ -1,5 +1,9 @@
 @import '*';
 
+.app-name {
+  font-size: 25px;
+}
+
 body {
   background-image: url('congruent_pentagon.png');
 }
@@ -22,8 +26,16 @@ button {
   background-color: $top-bar;
 }
 
+.canvas-container {
+  display: inline-block;
+}
+
 .control-panel {
   text-align: center;
+}
+
+.fingerprint-image {
+  background-color: white;
 }
 
 .gallery-title {
@@ -33,6 +45,10 @@ button {
   text-decoration: underline;
 }
 
+.image-title {
+  display: inline-block;
+}
+
 .input-button-style {
   background-color: #46BC73;
   border-color: black;
@@ -40,8 +56,28 @@ button {
   border-style: solid;
 }
 
+#my-canvas {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+}
+
+.outer-container {
+  text-align: center;
+}
+
+.sign-in-component {
+  display: inline-block;
+}
+
+#sign-in-container {
+  text-align: center;
+}
+
 .sign-in-title {
   font-size: 75px;
+  margin-bottom: 50px;
+  margin-top: 25px;
   text-align: center;
   text-decoration: underline;
 }
