@@ -17,18 +17,18 @@
       Social Media Fingerprint
     </div>
     <div class='top-bar-right'>
-      <ul class='menu' style='background-color: #B1F6CB;'>
+      <ul id='top-menu' class='menu'>
         <% if current_page?(images_path) %>
         <li>
-          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get, class: 'top-bar-buttons' %>
+          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get, class: 'input-button-style' %>
         </li>
         <% else %>
         <li>
-          <%= button_to 'Return to Gallery', images_path, :method => :get, class: 'top-bar-buttons' %>
+          <%= button_to 'Return to Gallery', images_path, :method => :get, class: 'input-button-style' %>
         </li>
         <% end %>
         <li>
-          <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'top-bar-buttons' %>
+          <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'input-button-style' %>
         </li>
       </ul>
       <% end %>

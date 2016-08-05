@@ -4,15 +4,26 @@ body {
   background-image: url('congruent_pentagon.png');
 }
 
+button {
+  border: solid;
+  border-color: black;
+  padding: 3px;
+  margin: 10px;
+}
+
 .button-hover {
   background-color: #2EFF7E;
   border-color: black;
   border-radius: 25px;
-  border-style: solid;
+  border: solid;
 }
 
 .button_to {
   background-color: $top-bar;
+}
+
+.control-panel {
+  text-align: center;
 }
 
 .gallery-title {
@@ -22,13 +33,23 @@ body {
   text-decoration: underline;
 }
 
-.tip-top-styling {
-  background-color: $top-bar;
-}
-
-.top-bar-buttons {
+.input-button-style {
   background-color: #46BC73;
   border-color: black;
   border-radius: 25px;
   border-style: solid;
+}
+
+.sign-in-title {
+  font-size: 75px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.tip-top-styling {
+  background-color: $top-bar;
+}
+
+#top-menu {
+  background-color: #B1F6CB;
 }

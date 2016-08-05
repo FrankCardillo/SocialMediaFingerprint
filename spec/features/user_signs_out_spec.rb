@@ -11,7 +11,7 @@ feature 'saving canvas as image' do
 
   scenario 'user signs out' do
     click_button 'Sign Out'
-    expect(page).to have_content('Signed out successfully')
-    expect(page).to have_content('Social Media Fingerprint')
+    expect(page).to_not have_content('Sign Out')
+    expect(page.find('#fb-logo')['src']).to have_content('FB-f-Logo__blue_58')
   end
 end

@@ -19,11 +19,11 @@
 //= require jquery.scrolly.min
 
 $(document).ready(function() {
-  $(".top-bar-buttons").hover(function() {
-    $(this).removeClass("top-bar-buttons");
+  $(".input-button-style").hover(function() {
+    $(this).removeClass("input-button-style");
     $(this).addClass("button-hover");
   }, function() {
     $(this).removeClass("button-hover");
-    $(this).addClass("top-bar-buttons");
+    $(this).addClass("input-button-style");
   });
 });
