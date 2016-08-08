@@ -1,11 +1,16 @@
 @import '*';
 
+.align {
+  text-align: center;
+}
+
 .app-name {
   font-size: 25px;
 }
 
 body {
   background-image: url('congruent_pentagon.png');
+  font-family: 'lobster', 'cursive';
 }
 
 button {
@@ -16,10 +21,11 @@ button {
 }
 
 .button-hover {
-  background-color: #2EFF7E;
+  background-color: #2eff7e;
   border-color: black;
   border-radius: 25px;
   border: solid;
+  font-size: 30px;
 }
 
 .button_to {
@@ -30,15 +36,21 @@ button {
   display: inline-block;
 }
 
+.canvas-title {
+  font-size: 25px;
+}
+
 .control-panel {
   text-align: center;
 }
 
 .fingerprint-image {
   background-color: white;
+  border: 15px solid #3e2b14;
 }
 
 .gallery-title {
+  font-family: 'lobster', 'cursive';
   font-size: 75px;
   margin-top: 5%;
   text-align: center;
@@ -47,13 +59,16 @@ button {
 
 .image-title {
   display: inline-block;
+  font-size: 20px;
+  text-align: center;
 }
 
 .input-button-style {
-  background-color: #46BC73;
+  background-color: #46bc73;
   border-color: black;
   border-radius: 25px;
   border-style: solid;
+  font-size: 30px;
 }
 
 #my-canvas {
@@ -71,10 +86,12 @@ button {
 }
 
 #sign-in-container {
+  margin-top: 200px;
   text-align: center;
 }
 
 .sign-in-title {
+  font-family: 'lobster', 'cursive';
   font-size: 75px;
   margin-bottom: 50px;
   margin-top: 25px;
@@ -86,6 +103,10 @@ button {
   background-color: $top-bar;
 }
 
+#top-btn-1, #top-btn-2, #top-btn-3 {
+  font-size: 20px;
+}
+
 #top-menu {
-  background-color: #B1F6CB;
+  background-color: #b1f6cb;
 }
