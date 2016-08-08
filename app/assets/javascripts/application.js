@@ -17,6 +17,13 @@
 //= require jquery.min
 //= require jquery.scrollex.min
 //= require jquery.scrolly.min
-//= require skel.min
-//= require util
-//= require main
+
+$(document).ready(function() {
+  $(".input-button-style").hover(function() {
+    $(this).removeClass("input-button-style");
+    $(this).addClass("button-hover");
+  }, function() {
+    $(this).removeClass("button-hover");
+    $(this).addClass("input-button-style");
+  });
+});

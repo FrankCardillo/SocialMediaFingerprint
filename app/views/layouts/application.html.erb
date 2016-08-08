@@ -4,29 +4,36 @@
   <title>Social Media Fingerprint</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: "alert alert-info" %>
-  <% end %>
-  <div class="row top-bar">
+  <div class='top-bar tip-top-styling'>
     <% if current_user %>
-      <% if current_page?(images_path) %>
-        <div class="top-bar-button-wrapper">
-          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get %>
-        </div>
-      <% else %>
-      <div class="top-bar-button-wrapper">
-        <%= button_to 'Return to Gallery', images_path, :method => :get %>
-      </div>
+    <div class='top-bar-title app-name'>
+      Social Media Fingerprint
+    </div>
+    <div class='top-bar-right'>
+      <ul id='top-menu' class='menu'>
+        <% if current_page?(images_path) %>
+        <li>
+          <%= button_to 'Create New Fingerprint', new_image_path, :method => :get, class: 'input-button-style', id: 'top-btn-1' %>
+        </li>
+        <% else %>
+        <li>
+          <%= button_to 'Return to Gallery', images_path, :method => :get, class: 'input-button-style', id: 'top-btn-2' %>
+        </li>
+        <% end %>
+        <li>
+          <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'input-button-style', id: 'top-btn-3' %>
+        </li>
+      </ul>
       <% end %>
-      <div class="top-bar-button-wrapper">
-        <%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-      </div>
-    <% end %>
+    </div>
   </div>
   <%= yield %>
 </body>

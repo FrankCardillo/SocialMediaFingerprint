@@ -1,16 +1,22 @@
 <%= hydration('fractalParams', @fractal_params) %>
 
-<div class="canvas-container">
-  <canvas class="canvas" id="myCanvas"></canvas>
+<div class='outer-container'>
+  <div class='canvas-container'>
+    <p class='canvas-title'>
+      Your Fingerprint
+    </p>
+    <canvas id='my-canvas'>
+    </canvas>
+  </div>
 </div>
 
-<div class="control-buttons">
-  <button id="drawer">Generate Your Fingerprint</button>
+<div class='control-panel'>
+  <button id='drawer' class='input-button-style'>Generate Your Fingerprint</button>
 </div>
-<div class="control-buttons">
-  <button id="saver">Save Your Fingerprint</button>
+<div class='control-panel'>
+  <button id='saver' class='input-button-style'>Save Your Fingerprint</button>
 </div>
 
-<%= javascript_include_tag 'paper-full', type: "text/javascript" %>
-<%= javascript_include_tag 'drawing', type: "text/paperscript", canvas: "myCanvas" %>
+<%= javascript_include_tag 'paper-full', type: 'text/javascript' %>
+<%= javascript_include_tag 'drawing', type: 'text/paperscript', canvas: 'my-canvas' %>
 <%= javascript_include_tag 'convert-drawing', type: 'text/javascript' %>
