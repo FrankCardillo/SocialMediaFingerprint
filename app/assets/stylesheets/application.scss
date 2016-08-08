@@ -15,16 +15,16 @@ body {
 
 button {
   border: solid;
-  border-color: black;
-  padding: 3px;
+  border-color: $black;
   margin: 10px;
+  padding: 3px;
 }
 
 .button-hover {
   background-color: $hover;
-  border-color: black;
-  border-radius: 25px;
   border: solid;
+  border-color: $black;
+  border-radius: 25px;
   font-size: 30px;
 }
 
@@ -45,7 +45,7 @@ button {
 }
 
 .fingerprint-image {
-  background-color: white;
+  background-color: $white;
   border: 15px solid $frame;
 }
 
@@ -65,16 +65,16 @@ button {
 
 .input-button-style {
   background-color: $base-button;
-  border-color: black;
+  border-color: $black;
   border-radius: 25px;
   border-style: solid;
   font-size: 30px;
 }
 
 #my-canvas {
-  background-color: white;
-  width: 250px;
+  background-color: $white;
   height: 250px;
+  width: 250px;
 }
 
 .outer-container {
