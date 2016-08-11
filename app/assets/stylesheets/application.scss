@@ -1,5 +1,17 @@
 @import '*';
 
+#about-btn {
+  font-size: 20px;
+}
+
+#about-form {
+  background-color: transparent;
+}
+
+.about-text {
+  margin: 100px auto;
+}
+
 .align {
   text-align: center;
 }
@@ -63,6 +75,10 @@ button {
   display: inline-block;
   font-size: 20px;
   text-align: center;
+}
+
+.indent {
+  text-indent: 50px;
 }
 
 .input-button-style {

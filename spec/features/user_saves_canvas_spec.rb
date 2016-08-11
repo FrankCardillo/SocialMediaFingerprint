@@ -9,7 +9,7 @@ feature 'saving canvas as image' do
   end
 
   scenario 'user navigates to canvas creation page' do
-    expect(page).to have_content('Gallery')
+    expect(page).to have_content('About this Project')
     click_button 'Create New Fingerprint'
     expect(page).to have_content('Generate Your Fingerprint')
   end
