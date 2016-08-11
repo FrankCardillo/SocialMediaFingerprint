@@ -12,6 +12,6 @@ describe "GET '/auth/facebook/callback'" do
   end
 
   it 'redirects to authenticated_root' do
-    expect(response).to redirect_to 'http://www.example.com/images'
+    expect(response).to redirect_to 'http://www.example.com/about'
   end
 end

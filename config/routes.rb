@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     delete 'sign_out', :to => 'devise/sessions#destroy'
     authenticated :user do
-      root 'images#index', as: :authenticated_root
+      root 'about#index', as: :authenticated_root
+      resources :about, only: [:index]
       resources :images, only: [:index, :create, :new]
     end
 

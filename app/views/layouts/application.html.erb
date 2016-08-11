@@ -21,11 +21,14 @@
       <ul id='top-menu' class='menu'>
         <% if current_page?(images_path) %>
         <li>
+          <%= button_to 'About', about_index_path, :method => :get, class: 'input-button-style', id: 'top-btn-2' %>
+        </li>
+        <li>
           <%= button_to 'Create New Fingerprint', new_image_path, :method => :get, class: 'input-button-style', id: 'top-btn-1' %>
         </li>
-        <% else %>
+        <% elsif current_page?(new_image_path)%>
         <li>
-          <%= button_to 'Return to Gallery', images_path, :method => :get, class: 'input-button-style', id: 'top-btn-2' %>
+          <%= button_to 'About', about_index_path, :method => :get, class: 'input-button-style', id: 'top-btn-2' %>
         </li>
         <% end %>
         <li>
